@@ -2,10 +2,8 @@
 #include <stdio.h>
 #include "ticket.h"
 #include "fileops.h"
-
 int main(void) {
     int ch;
-
     do {
         printf("\n===== BUS TICKET BOOKING SYSTEM =====\n");
         printf("1. Book Ticket\n");
@@ -15,13 +13,11 @@ int main(void) {
         printf("5. Cancel Ticket\n");
         printf("6. Exit\n");
         printf("Enter choice: ");
-
         if (scanf("%d", &ch) != 1) {
             clearInput();
             printf("Invalid input.\n");
             ch = 0;
         }
-
         switch (ch) {
             case 1:
                 bookTicket();
@@ -45,7 +41,5 @@ int main(void) {
                 printf("Wrong option!\n");
         }
     } while (ch != 6);
-
     return 0;
 }
-
